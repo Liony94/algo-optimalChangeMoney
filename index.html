@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Rendre la monnaie</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light d-flex align-items-center">
+  <div class="container bg-white p-5 rounded shadow-lg">
+    <h1 class="mb-4 text-center">Rendre la monnaie</h1>
+    <form action="#">
+      <div class="mb-3">
+        <label for="montant" class="form-label">Montant de la transaction :</label>
+        <input type="number" name="montant" id="montant" class="form-control" placeholder="Saisissez le montant du produit">
+      </div>
+      <div class="mb-3">
+        <label for="paye" class="form-label">Montant payé :</label>
+        <input type="number" name="paye" id="paye" class="form-control" placeholder="Saisissez le montant payé">
+      </div>
+      <button type="button" class="btn btn-primary" onclick="calculer()">Calculer</button>
+    </form>
+    <div class="resultat mt-3">
+      <p class="mb-0 h4">Résultat :</p>
+      <p class="bg-success text-white p-2 rounded"><strong>Montant rendu : <span id="montantRendu"></span> €</strong></p>
+      <ul class="list-group">
+          <li class="list-group-item hidden">Billets de 500€ : <span id="bill500"></span></li>
+          <li class="list-group-item hidden">Billets de 100€ : <span id="bill100"></span></li>
+          <li class="list-group-item hidden">Billets de 50€ : <span id="bill50"></span></li>
+          <li class="list-group-item hidden">Billets de 20€ : <span id="bill20"></span></li>
+          <li class="list-group-item hidden">Billets de 10€ : <span id="bill10"></span></li>
+          <li class="list-group-item hidden">Billets de 5€ : <span id="bill5"></span></li>
+          <li class="list-group-item hidden">Pièces de 2€ : <span id="coin2"></span></li>
+          <li class="list-group-item hidden">Pièces de 1€ : <span id="coin1"></span></li>
+          <li class="list-group-item hidden">Pièces de 50 centimes : <span id="coin050"></span></li>
+          <li class="list-group-item hidden">Pièces de 20 centimes : <span id="coin020"></span></li>
+          <li class="list-group-item hidden">Pièces de 10 centimes : <span id="coin010"></span></li>
+          <li class="list-group-item hidden">Pièces de 5 centimes : <span id="coin005"></span></li>
+          <li class="list-group-item hidden">Pièces de 2 centimes : <span id="coin002"></span></li>
+          <li class="list-group-item hidden">Pièces de 1 centimes : <span id="coin001"></span></li>
+        </ul>
+      </div>
+    </div>
+</body>
+</html>
